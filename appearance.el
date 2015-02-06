@@ -7,5 +7,8 @@
 ; Get rid of the butt ugly OSX scrollbars in GUI
 (when (display-graphic-p) (set-scroll-bar-mode nil))
 
+; Use solarized dark (in GUI)
+(when (display-graphic-p) (load-theme 'solarized-dark t))
 
-
+; Use Source Code Pro
+(when (display-graphic-p) (set-face-attribute 'default nil :font "Source Code Pro for Powerline-14"))
