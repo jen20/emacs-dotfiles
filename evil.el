@@ -1,10 +1,20 @@
 ; Configure evil mode
 ; Use C-u for scrolling up
 (setq evil-want-C-u-scroll t)
+
+; Set cursor colors depending on mode
+(when (display-graphic-p)
+  (setq evil-emacs-state-cursor '("red" box))
+  (setq evil-normal-state-cursor '("green" box))
+  (setq evil-visual-state-cursor '("orange" box))
+  (setq evil-insert-state-cursor '("red" bar))
+  (setq evil-replace-state-cursor '("red" bar))
+  (setq evil-operator-state-cursor '("red" hollow))
+)
+
 ; Use evil mode
 (require 'evil)
 (evil-mode t)
-
 
 ; Bind escape to quit minibuffers
 (defun minibuffer-keyboard-quit ()

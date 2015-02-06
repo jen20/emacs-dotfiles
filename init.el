@@ -1,6 +1,6 @@
 ; Use the package manager
 (require 'package)
-
+(add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized/")
 ; Sets package management sources
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
@@ -27,3 +27,4 @@
 
 ; Load configuration modules
 (load-user-file "evil.el")
+(load-user-file "appearance.el")
